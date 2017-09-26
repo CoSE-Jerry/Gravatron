@@ -73,7 +73,6 @@ class Image(QThread):
             with PiCamera() as camera:
                 sleep(0.8)
                 camera.resolution = (2464,2464)
-                camera._set_rotation(180)
                 camera.capture(current_image)
             self.imaging_running_done.emit()
             self.capture.emit()
