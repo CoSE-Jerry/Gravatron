@@ -138,6 +138,7 @@ class Ui_MainWindow(object):
         self.Gravi_Red.setObjectName("Gravi_Red")
         self.verticalLayout_5.addWidget(self.Gravi_Red)
         self.Gravi_Green = QtWidgets.QRadioButton(self.layoutWidget1)
+        self.Gravi_Green.setChecked(True)
         self.Gravi_Green.setObjectName("Gravi_Green")
         self.verticalLayout_5.addWidget(self.Gravi_Green)
         self.Gravi_Blue = QtWidgets.QRadioButton(self.layoutWidget1)
@@ -168,18 +169,19 @@ class Ui_MainWindow(object):
         self.horizontalLayout_3.addWidget(self.Color_Germi)
         self.verticalLayout_7 = QtWidgets.QVBoxLayout()
         self.verticalLayout_7.setObjectName("verticalLayout_7")
-        self.Germi_Red = QtWidgets.QRadioButton(self.layoutWidget_2)
-        self.Germi_Red.setObjectName("Germi_Red")
-        self.verticalLayout_7.addWidget(self.Germi_Red)
-        self.Germi_Green = QtWidgets.QRadioButton(self.layoutWidget_2)
-        self.Germi_Green.setObjectName("Germi_Green")
-        self.verticalLayout_7.addWidget(self.Germi_Green)
-        self.Germi_Blue = QtWidgets.QRadioButton(self.layoutWidget_2)
-        self.Germi_Blue.setObjectName("Germi_Blue")
-        self.verticalLayout_7.addWidget(self.Germi_Blue)
-        self.Germi_White = QtWidgets.QRadioButton(self.layoutWidget_2)
-        self.Germi_White.setObjectName("Germi_White")
-        self.verticalLayout_7.addWidget(self.Germi_White)
+        self.Delay_24h = QtWidgets.QRadioButton(self.layoutWidget_2)
+        self.Delay_24h.setObjectName("Delay_24h")
+        self.verticalLayout_7.addWidget(self.Delay_24h)
+        self.Delay_72h = QtWidgets.QRadioButton(self.layoutWidget_2)
+        self.Delay_72h.setChecked(True)
+        self.Delay_72h.setObjectName("Delay_72h")
+        self.verticalLayout_7.addWidget(self.Delay_72h)
+        self.Delay_120h = QtWidgets.QRadioButton(self.layoutWidget_2)
+        self.Delay_120h.setObjectName("Delay_120h")
+        self.verticalLayout_7.addWidget(self.Delay_120h)
+        self.Delay_168h = QtWidgets.QRadioButton(self.layoutWidget_2)
+        self.Delay_168h.setObjectName("Delay_168h")
+        self.verticalLayout_7.addWidget(self.Delay_168h)
         self.horizontalLayout_3.addLayout(self.verticalLayout_7)
         self.Presets1.addTab(self.Germination, "")
         self.Barrier = QtWidgets.QWidget()
@@ -279,10 +281,6 @@ class Ui_MainWindow(object):
         self.Storage_Directory.setCheckable(False)
         self.Storage_Directory.setObjectName("Storage_Directory")
         self.verticalLayout_2.addWidget(self.Storage_Directory)
-        self.Timelapse = QtWidgets.QPushButton(self.layoutWidget2)
-        self.Timelapse.setEnabled(True)
-        self.Timelapse.setObjectName("Timelapse")
-        self.verticalLayout_2.addWidget(self.Timelapse)
         self.verticalLayout_3.addLayout(self.verticalLayout_2)
         self.Live_Feed = QtWidgets.QPushButton(self.layoutWidget2)
         self.Live_Feed.setObjectName("Live_Feed")
@@ -479,7 +477,7 @@ class Ui_MainWindow(object):
         self.Gravi_Text.setHtml(_translate("MainWindow", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
 "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
 "p, li { white-space: pre-wrap; }\n"
-"</style></head><body style=\" font-family:\'MS Shell Dlg 2\'; font-size:8.1pt; font-weight:400; font-style:normal;\">\n"
+"</style></head><body style=\" font-family:\'MS Shell Dlg 2\'; font-size:7.8pt; font-weight:400; font-style:normal;\">\n"
 "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:8.25pt;\">12 hours full spectrum light from above, 90 degree rotation &amp; all lights become a certain color.</span></p></body></html>"))
         self.Gravi_Confirm.setText(_translate("MainWindow", "Confirm "))
         self.Color_Gravi.setText(_translate("MainWindow", "Rotation Color:"))
@@ -491,19 +489,19 @@ class Ui_MainWindow(object):
         self.Germi_Text.setHtml(_translate("MainWindow", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
 "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
 "p, li { white-space: pre-wrap; }\n"
-"</style></head><body style=\" font-family:\'MS Shell Dlg 2\'; font-size:8.1pt; font-weight:400; font-style:normal;\">\n"
-"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:8.25pt;\">7 days of a certain colored light from all sides.</span></p></body></html>"))
+"</style></head><body style=\" font-family:\'MS Shell Dlg 2\'; font-size:7.8pt; font-weight:400; font-style:normal;\">\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:8pt;\">Delayed gravitropic assay,</span><span style=\" font-size:8.25pt;\"> 90 degree rotation occurs 6 hours after delay completion.</span></p></body></html>"))
         self.Germi_Confirm.setText(_translate("MainWindow", "Confirm "))
-        self.Color_Germi.setText(_translate("MainWindow", "Color Setting:"))
-        self.Germi_Red.setText(_translate("MainWindow", "Red"))
-        self.Germi_Green.setText(_translate("MainWindow", "Green"))
-        self.Germi_Blue.setText(_translate("MainWindow", "Blue"))
-        self.Germi_White.setText(_translate("MainWindow", "White"))
-        self.Presets1.setTabText(self.Presets1.indexOf(self.Germination), _translate("MainWindow", "Germination"))
+        self.Color_Germi.setText(_translate("MainWindow", "Delay Setting:"))
+        self.Delay_24h.setText(_translate("MainWindow", "24h"))
+        self.Delay_72h.setText(_translate("MainWindow", "72h"))
+        self.Delay_120h.setText(_translate("MainWindow", "120h"))
+        self.Delay_168h.setText(_translate("MainWindow", "168h"))
+        self.Presets1.setTabText(self.Presets1.indexOf(self.Germination), _translate("MainWindow", "Gravi_Germination"))
         self.Barrier_Text.setHtml(_translate("MainWindow", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
 "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
 "p, li { white-space: pre-wrap; }\n"
-"</style></head><body style=\" font-family:\'MS Shell Dlg 2\'; font-size:8.1pt; font-weight:400; font-style:normal;\">\n"
+"</style></head><body style=\" font-family:\'MS Shell Dlg 2\'; font-size:7.8pt; font-weight:400; font-style:normal;\">\n"
 "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:8.25pt;\">24 hour of a certain colored light from above.</span></p></body></html>"))
         self.Barrier_Confirm.setText(_translate("MainWindow", "Confirm "))
         self.Color_Barri.setText(_translate("MainWindow", "Color Setting:"))
@@ -523,7 +521,6 @@ class Ui_MainWindow(object):
         self.ISD_spinBox.setSuffix(_translate("MainWindow", " min"))
         self.Directory_Label.setText(_translate("MainWindow", "Storage Directory Not Selected"))
         self.Storage_Directory.setText(_translate("MainWindow", "Select Storage Directory"))
-        self.Timelapse.setText(_translate("MainWindow", "Timelapse Generation: ON"))
         self.Live_Feed.setText(_translate("MainWindow", "Start Live Feed (30s)"))
         self.Progress_Label.setText(_translate("MainWindow", "Progress:"))
         self.Control_Tab.setTabText(self.Control_Tab.indexOf(self.Imaging), _translate("MainWindow", "Imaging"))
