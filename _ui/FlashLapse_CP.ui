@@ -419,7 +419,7 @@ p, li { white-space: pre-wrap; }
         </widget>
         <widget class="QWidget" name="Germination">
          <attribute name="title">
-          <string>Gravi_Germination</string>
+          <string>Gravi_Germ</string>
          </attribute>
          <widget class="QTextBrowser" name="Germi_Text">
           <property name="geometry">

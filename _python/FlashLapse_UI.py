@@ -497,7 +497,7 @@ class Ui_MainWindow(object):
         self.Delay_72h.setText(_translate("MainWindow", "72h"))
         self.Delay_120h.setText(_translate("MainWindow", "120h"))
         self.Delay_168h.setText(_translate("MainWindow", "168h"))
-        self.Presets1.setTabText(self.Presets1.indexOf(self.Germination), _translate("MainWindow", "Gravi_Germination"))
+        self.Presets1.setTabText(self.Presets1.indexOf(self.Germination), _translate("MainWindow", "Gravi_Germ"))
         self.Barrier_Text.setHtml(_translate("MainWindow", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
 "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
 "p, li { white-space: pre-wrap; }\n"
