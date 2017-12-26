@@ -49,7 +49,6 @@ done = False
 average = False
 high = False
 cloud =False
-run_timelapse = True
 ASD = serial.Serial('/dev/ttyACM0', 9600)
 
 class Image(QThread):
@@ -106,24 +105,6 @@ class Dropbox(QThread):
                 del file_list[0]
             if(current == total - 1 and len(file_list) == 0):
                 self.upload_complete.emit()
-                
-class Timelapse(QThread):
-    begin = QtCore.pyqtSignal()
-    done = QtCore.pyqtSignal()
-    
-    def __init__(self):
-        QThread.__init__(self)
-
-    def __del__(self):
-        self._running = False
-
-    def run(self):
-        global file, directory, cloud, file_list
-        os.system("avconv -r 10 -i " + file + " -r 5 -vcodec libx264 -crf 20 -g 15 -vf scale=400:400 " + directory + "/timelapse.mp4")
-        os.system("omxplayer -p -o hdmi " + directory + "/timelapse.mp4")
-        os.system("rm " + directory + "/timelapse.mp4")
-    def stop(self):
-        self.running = False
 
 class Email(QThread):
     
@@ -350,11 +331,7 @@ class MainWindow(QMainWindow, FlashLapse_UI.Ui_MainWindow):
         self.Start_Imaging.setText("Stop Image Sequence")
 
     def Done(self):
-        global done, on_flag, run_timelapse
-        
-        if(run_timelapse):
-            self.Timelapse_Thread = Timelapse()
-            self.Timelapse_Thread.start()
+        global done, on_flag
 
         done=True
         self.Check_Point()
@@ -549,17 +526,6 @@ class MainWindow(QMainWindow, FlashLapse_UI.Ui_MainWindow):
 
     def rotate(self):
         ASD.write(bytes('z', 'UTF-8'))
-
-    def timelapse_change(self):
-        global run_timelapse
-        if(run_timelapse):
-            self.Timelapse.setText("Timelapse Generation: OFF")
-            run_timelapse = False
-        else:
-            self.Timelapse.setText("Timelapse Generation: ON")
-            run_timelapse = True
-        
-
         
     def __init__(self):
         super(self.__class__, self).__init__()
@@ -583,7 +549,6 @@ class MainWindow(QMainWindow, FlashLapse_UI.Ui_MainWindow):
         self.Barrier_Confirm.clicked.connect(lambda: self.barri_confirm())
         self.Disco.clicked.connect(lambda: self.disco_confirm())
         self.Rotate.clicked.connect(lambda: self.rotate())
-        self.Timelapse.clicked.connect(lambda: self.timelapse_change())
 
 # I feel better having one of these
 def main():
