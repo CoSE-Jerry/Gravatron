@@ -66,7 +66,7 @@ class Image(QThread):
     def run(self):
         global current, current_image, file_list, file, delay
 
-        for j in range(delay)
+        for j in range(delay):
             sleep(3600)
         
         for i in range(total):
