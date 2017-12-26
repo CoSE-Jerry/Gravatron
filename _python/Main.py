@@ -525,13 +525,13 @@ class MainWindow(QMainWindow, FlashLapse_UI.Ui_MainWindow):
 
 
     def germi_confirm(self):
-        if self.Germi_Red.isChecked():
+        if self.Delay_24h.isChecked():
             ASD.write(bytes('k', 'UTF-8'))
-        elif self.Germi_Green.isChecked():
+        elif self.Delay_72h.isChecked():
             ASD.write(bytes('l', 'UTF-8'))
-        elif self.Germi_Blue.isChecked():
+        elif self.Delay_120h.isChecked():
             ASD.write(bytes('m', 'UTF-8'))
-        elif self.Germi_White.isChecked():
+        elif self.Delay_168h.isChecked():
             ASD.write(bytes('n', 'UTF-8'))
 
     def barri_confirm(self):
