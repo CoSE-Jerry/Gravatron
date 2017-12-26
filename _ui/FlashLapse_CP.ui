@@ -85,7 +85,7 @@
      </rect>
     </property>
     <property name="currentIndex">
-     <number>0</number>
+     <number>2</number>
     </property>
     <widget class="QWidget" name="Lighting">
      <attribute name="title">
@@ -101,7 +101,7 @@
        </rect>
       </property>
       <property name="currentIndex">
-       <number>0</number>
+       <number>1</number>
       </property>
       <widget class="QWidget" name="Constant">
        <attribute name="title">
@@ -117,7 +117,7 @@
          </rect>
         </property>
         <property name="currentIndex">
-         <number>0</number>
+         <number>1</number>
         </property>
         <widget class="QWidget" name="FullColor">
          <attribute name="title">
@@ -342,7 +342,7 @@
            <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
-&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:7.8pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:8.1pt; font-weight:400; font-style:normal;&quot;&gt;
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:8.25pt;&quot;&gt;12 hours full spectrum light from above, 90 degree rotation &amp;amp; all lights become a certain color.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
           </property>
          </widget>
@@ -393,9 +393,6 @@ p, li { white-space: pre-wrap; }
                <property name="text">
                 <string>Green</string>
                </property>
-               <property name="checked">
-                <bool>true</bool>
-               </property>
               </widget>
              </item>
              <item>
@@ -419,7 +416,7 @@ p, li { white-space: pre-wrap; }
         </widget>
         <widget class="QWidget" name="Germination">
          <attribute name="title">
-          <string>Gravi_Germination</string>
+          <string>Germination</string>
          </attribute>
          <widget class="QTextBrowser" name="Germi_Text">
           <property name="geometry">
@@ -434,8 +431,8 @@ p, li { white-space: pre-wrap; }
            <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
-&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:7.8pt; font-weight:400; font-style:normal;&quot;&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:8pt;&quot;&gt;Delayed gravitropic assay,&lt;/span&gt;&lt;span style=&quot; font-size:8.25pt;&quot;&gt; 90 degree rotation occurs 6 hours after delay completion.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:8.1pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:8.25pt;&quot;&gt;7 days of a certain colored light from all sides.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
           </property>
          </widget>
          <widget class="QPushButton" name="Germi_Confirm">
@@ -464,7 +461,7 @@ p, li { white-space: pre-wrap; }
            <item>
             <widget class="QLabel" name="Color_Germi">
              <property name="text">
-              <string>Delay Setting:</string>
+              <string>Color Setting:</string>
              </property>
              <property name="alignment">
               <set>Qt::AlignCenter</set>
@@ -474,33 +471,30 @@ p, li { white-space: pre-wrap; }
            <item>
             <layout class="QVBoxLayout" name="verticalLayout_7">
              <item>
-              <widget class="QRadioButton" name="Delay_24h">
+              <widget class="QRadioButton" name="Germi_Red">
                <property name="text">
-                <string>24h</string>
+                <string>Red</string>
                </property>
               </widget>
              </item>
              <item>
-              <widget class="QRadioButton" name="Delay_72h">
+              <widget class="QRadioButton" name="Germi_Green">
                <property name="text">
-                <string>72h</string>
-               </property>
-               <property name="checked">
-                <bool>true</bool>
+                <string>Green</string>
                </property>
               </widget>
              </item>
              <item>
-              <widget class="QRadioButton" name="Delay_120h">
+              <widget class="QRadioButton" name="Germi_Blue">
                <property name="text">
-                <string>120h</string>
+                <string>Blue</string>
                </property>
               </widget>
              </item>
              <item>
-              <widget class="QRadioButton" name="Delay_168h">
+              <widget class="QRadioButton" name="Germi_White">
                <property name="text">
-                <string>168h</string>
+                <string>White</string>
                </property>
               </widget>
              </item>
@@ -526,7 +520,7 @@ p, li { white-space: pre-wrap; }
            <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
-&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:7.8pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:8.1pt; font-weight:400; font-style:normal;&quot;&gt;
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:8.25pt;&quot;&gt;24 hour of a certain colored light from above.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
           </property>
          </widget>
