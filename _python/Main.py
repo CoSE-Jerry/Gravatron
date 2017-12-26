@@ -39,6 +39,7 @@ duration = 0
 total = 0
 current = 0
 noti_count = 0
+delay = 0
 current_image = None
 file = None
 name = None
@@ -63,7 +64,11 @@ class Image(QThread):
         self._running = False
 
     def run(self):
-        global current, current_image, file_list, file
+        global current, current_image, file_list, file, delay
+
+        for j in range(delay)
+            sleep(3600)
+        
         for i in range(total):
             current = i
             sleep(0.2)
@@ -379,6 +384,7 @@ class MainWindow(QMainWindow, FlashLapse_UI.Ui_MainWindow):
         self.Frequency_Low.setEnabled(True)
         self.Frequency_Average.setEnabled(True)
         self.Frequency_High.setEnabled(True)
+        self.Cloud_Sync.setChecked(True)
             
     def Start_Image(self):
         global off, low, average, high, cloud
@@ -502,14 +508,19 @@ class MainWindow(QMainWindow, FlashLapse_UI.Ui_MainWindow):
 
 
     def germi_confirm(self):
+        global delay
         if self.Delay_24h.isChecked():
             ASD.write(bytes('k', 'UTF-8'))
+            delay = 24
         elif self.Delay_72h.isChecked():
             ASD.write(bytes('l', 'UTF-8'))
+            delay = 72
         elif self.Delay_120h.isChecked():
             ASD.write(bytes('m', 'UTF-8'))
+            delay = 120
         elif self.Delay_168h.isChecked():
             ASD.write(bytes('n', 'UTF-8'))
+            delay = 168
 
     def barri_confirm(self):
         if self.Barri_Red.isChecked():
